@@ -17,14 +17,14 @@ namespace AuthServWEbApi.Controllers
                 Emaial="user@email.com",
                 PasswordHasher = "user",
                 Roles = new Role[] {Role.User}
-            }
+            },
             new Account()
             {
                 Id= Guid.Parse("e2371dc9-a849-4f3c-9004-df5g544sa"),
                 Emaial="user3@email.com",
                 PasswordHasher = "user",
                 Roles = new Role[] {Role.User}
-            }
+            },
             new Account()
             {
                 Id= Guid.Parse("e2371dc9-a849-4f3c-9004-df5d544sa"),
@@ -33,5 +33,23 @@ namespace AuthServWEbApi.Controllers
                 Roles = new Role[] {Role.User}
             }
         };
+
+        [Route("Login")]
+        [HttpPost]
+        public IActionResult Login([FromBody]Login request)
+        {
+            var user = AutenticateUser(request.Email, request.Password );
+
+            if (user != null)
+            {
+                //generate jwt
+            }
+            return Unauthorized();
+        }
+
+        private Account AutenticateUser(string email, string password )
+        {
+            return Accounts.SingleOrDefault(x => x.Email == email && x.Password == password);
+        }
     }
 }

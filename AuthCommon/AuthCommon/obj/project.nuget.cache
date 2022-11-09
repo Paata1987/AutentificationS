@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "oDe1foNzDulBXRpK3bTxC7Ji5WlCxNDjHfjRHc+/puYFkLp6vbVWFhmcSRTWP5PUngjhe94xvbMf+yV5ERC8BA==",
+  "success": true,
+  "projectFilePath": "C:\\Repository\\IdentitiyServer\\AutentificationS\\AuthCommon\\AuthCommon\\AuthCommon.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\glasspaper\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\glasspaper\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.25.0\\microsoft.identitymodel.abstractions.6.25.0.nupkg.sha512",
+    "C:\\Users\\glasspaper\\.nuget\\packages\\microsoft.identitymodel.logging\\6.25.0\\microsoft.identitymodel.logging.6.25.0.nupkg.sha512",
+    "C:\\Users\\glasspaper\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.25.0\\microsoft.identitymodel.tokens.6.25.0.nupkg.sha512",
+    "C:\\Users\\glasspaper\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

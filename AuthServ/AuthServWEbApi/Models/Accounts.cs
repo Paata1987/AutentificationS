@@ -1,4 +1,4 @@
-﻿namespace AuthServWEbApi.Models
+﻿ namespace AuthServWEbApi.Models
 {
     public class Accounts
     {
