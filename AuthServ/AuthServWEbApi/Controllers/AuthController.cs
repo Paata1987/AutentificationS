@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AuthServWEbApi.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuthServWEbApi.Controllers
@@ -7,5 +9,29 @@ namespace AuthServWEbApi.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
+        private List<Account> Accounts => new List<Account>
+        {
+            new Account()
+            {
+                Id= Guid.Parse("e2371dc9-a849-4f3c-9004-df54544sa"),
+                Emaial="user@email.com",
+                PasswordHasher = "user",
+                Roles = new Role[] {Role.User}
+            }
+            new Account()
+            {
+                Id= Guid.Parse("e2371dc9-a849-4f3c-9004-df5g544sa"),
+                Emaial="user3@email.com",
+                PasswordHasher = "user",
+                Roles = new Role[] {Role.User}
+            }
+            new Account()
+            {
+                Id= Guid.Parse("e2371dc9-a849-4f3c-9004-df5d544sa"),
+                Emaial="user2@email.com",
+                PasswordHasher = "user",
+                Roles = new Role[] {Role.User}
+            }
+        };
     }
 }
