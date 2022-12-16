@@ -11,16 +11,21 @@ class UserController {
       }); //store refreshtoken in cookie
       return res.json(userData);
     } catch (e) {
+      next(e);
       console.log(e);
     }
   }
   async login(req, res, next) {
     try {
-    } catch (e) {}
+    } catch (e) {
+      next(e);
+    }
   }
   async logout(req, res, next) {
     try {
-    } catch (e) {}
+    } catch (e) {
+      next(e);
+    }
   }
   async activate(req, res, next) {
     try {
@@ -28,17 +33,22 @@ class UserController {
       await userService.activate(activationLink);
       return res.redirect(process.env.CLIENT_URL);
     } catch (e) {
+      next(e);
       console.log(e);
     }
   }
   async refresh(req, res, next) {
     try {
-    } catch (e) {}
+    } catch (e) {
+      next(e);
+    }
   }
   async getUsers(req, res, next) {
     try {
       res.json(['123', '345']);
-    } catch (e) {}
+    } catch (e) {
+      next(e);
+    }
   }
 }
 
