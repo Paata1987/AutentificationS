@@ -79,6 +79,18 @@ class UserController {
       next(e);
     }
   }
+
+  async getProducts(req, res, next) {
+    try {
+      const API_URL = 'https://fakestoreapi.com/products';
+      fetch(API_URL)
+        .then((res) => res.json())
+        .then((json) => setTodo(json))
+        .catch((error) => console.log(error.message));
+    } catch (e) {
+      next(e);
+    }
+  }
 }
 
 module.exports = new UserController();
