@@ -3,13 +3,27 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Store from './store/store';
+import { createContext } from 'react';
+
+interface IState {
+  store: Store;
+}
+
+const store = new Store();
+
+export const Context = createContext<IState>({
+  store,
+});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <Context.Provider value={{ store }}>
+      <App />
+    </Context.Provider>
   </React.StrictMode>
 );
 

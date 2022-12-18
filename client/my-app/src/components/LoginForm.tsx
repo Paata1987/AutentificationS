@@ -1,9 +1,11 @@
 import * as React from 'react';
-import { Component, useState, FC } from 'react';
+import { Component, useState, FC, useContext } from 'react';
+import { Context } from '..';
 
-const LoginForm: FC = () => {
+export const LoginForm: FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { store } = useContext(Context);
   return (
     <div>
       <input
@@ -18,8 +20,10 @@ const LoginForm: FC = () => {
         type="password"
         placeholder="password"
       />
-      <button>Login</button>
-      <button>Registration</button>
+      <button onClick={() => store.login(email, password)}>Login</button>
+      <button onClick={() => store.registration(email, password)}>
+        Registration
+      </button>
     </div>
   );
 };
